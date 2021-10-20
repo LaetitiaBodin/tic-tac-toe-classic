@@ -9,3 +9,43 @@
     font-weight: normal;
     font-style: normal;
 }
+
+$Foam: #e0fbfc;
+$AquaIsland: #98c1d9;
+$EbonyClay: #293241;
+  
+body {
+    background-color: $AquaIsland;
+    text-align: center;
+}
+
+h1 {
+    color: $EbonyClay;
+    font-size: 40px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+}
+
+#board {
+    margin: 20px auto;
+    display: grid;
+    width: 420px;
+    max-width: 80%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+canvas {
+    width: 100%;
+    margin: 0;
+    border: 4px solid $EbonyClay;
+    margin-top: -4px;
+    background-color: $Foam;
+}
+
+p {
+    color: $EbonyClay;
+    font-size: 30px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+}
+ 

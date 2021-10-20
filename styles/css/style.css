@@ -5,3 +5,40 @@
   font-weight: normal;
   font-style: normal;
 }
+
+body {
+  background-color: #98c1d9;
+  text-align: center;
+}
+
+h1 {
+  color: #293241;
+  font-size: 40px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+}
+
+#board {
+  margin: 20px auto;
+  display: -ms-grid;
+  display: grid;
+  width: 420px;
+  max-width: 80%;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+canvas {
+  width: 100%;
+  margin: 0;
+  border: 4px solid #293241;
+  margin-top: -4px;
+  background-color: #e0fbfc;
+}
+
+p {
+  color: #293241;
+  font-size: 30px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+}
