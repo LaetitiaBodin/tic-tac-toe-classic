@@ -1,0 +1,4 @@
+images/* -linguist-detectable
+styles/css/* -linguist-detectable
+styles/font/* linguist-vendored
+styles/mincss/* -linguist-detectable
