@@ -12,6 +12,7 @@
 
 $Foam: #e0fbfc;
 $AquaIsland: #98c1d9;
+$EastBay:#3d5a80;
 $EbonyClay: #293241;
   
 body {
@@ -47,5 +48,19 @@ p {
     font-size: 30px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: bold;
+}
+
+button {
+    background-color: $Foam;
+    color: $EbonyClay;
+    font-size: 30px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    border: 4px outset $EastBay;
+    &:active {
+        border: 4px inset $EastBay;
+    }
 }
  

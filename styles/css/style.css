@@ -42,3 +42,18 @@ p {
   font-family: 'Noto Sans', sans-serif;
   font-weight: bold;
 }
+
+button {
+  background-color: #e0fbfc;
+  color: #293241;
+  font-size: 30px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  border: 4px outset #3d5a80;
+}
+
+button:active {
+  border: 4px inset #3d5a80;
+}

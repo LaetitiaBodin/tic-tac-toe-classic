@@ -22,6 +22,7 @@ document.querySelectorAll('canvas').forEach((item, idx) => item.addEventListener
             moves[idx] = 'O'
             player.innerHTML = 'TURN: PLAYER 1'
         }
+        isGameOver()
     }
 }))
 
@@ -77,4 +78,38 @@ function circle (id) {
             ctx.fill()
         }, i * 6, i)
     }  
+}
+
+function isGameOver () {
+    let winner
+    const lines = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+    ];
+    for (let i = 0; i < lines.length; i++) {
+        const [a, b, c] = lines[i];
+        if (moves[a] && moves[a] === moves[b] && moves[a] === moves[c]) {
+            gameOver = true
+            moves[a] === 'X' ? winner = 'PLAYER 1 WINS!' : winner = 'PLAYER 2 WINS!'
+        }
+    }
+    
+    if (counter === 9 && !gameOver) {
+        gameOver = true
+        winner = `IT'S A DRAW...`
+    }
+    
+    if (gameOver) {
+        player.remove()
+        info.innerHTML += `
+            <p>${winner}</p>
+            <button id="replay">REPLAY</button>`
+        replay.addEventListener('click', () => location.reload())
+    }
 }
